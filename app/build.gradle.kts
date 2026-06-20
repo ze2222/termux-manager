@@ -41,12 +41,14 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
+    // M1:浏览与异步
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.kotlinx.coroutines.android)
+
     // 后续里程碑按需启用(版本已在 gradle/libs.versions.toml 中备好):
-    // implementation(libs.androidx.recyclerview)
     // implementation(libs.androidx.documentfile)
-    // implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    // implementation(libs.androidx.lifecycle.runtime.ktx)
-    // implementation(libs.kotlinx.coroutines.android)
     // implementation(libs.androidx.datastore.preferences)
     // implementation(libs.androidx.security.crypto)
     // implementation(libs.androidx.room.runtime)

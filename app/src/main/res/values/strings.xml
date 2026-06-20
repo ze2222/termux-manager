@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Termux-Manager</string>
+    <string name="onboarding_title">欢迎使用 Termux-Manager</string>
+    <string name="onboarding_desc">需要授权访问「内部存储」根目录,以管理 Documents/Termux-Manager 工作区与公共目录。不会访问应用私有目录或系统分区。</string>
+    <string name="onboarding_grant">授权内部存储</string>
+    <string name="grant_need_root">请在文件选择器中选择「内部存储」最顶层目录,再点「使用此文件夹」。</string>
+    <string name="folder_label">文件夹</string>
 </resources>
