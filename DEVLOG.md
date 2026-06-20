@@ -153,6 +153,19 @@ e: MainActivity.kt:22:41 Unresolved reference 'viewModels'.
 
 ---
 
+### CI 维护:升级 Actions 到 Node 24(消除 deprecation 警告)
+
+**现象**:每次 CI 都出现 `Node.js 20 is deprecated` 警告(GitHub 已强制用 Node 24 运行,不影响构建,仅提示)。
+**原因**:所用 action 版本的 `action.yml` 声明了 `runs.using: node20`。
+**解决**:查各仓库最新 release 并升级到 Node 24 版本——
+```bash
+gh api repos/<owner>/<repo>/releases/latest --jq .tag_name
+```
+checkout v4→**v7**、setup-java v4→**v5**、setup-android v3→**v4**、setup-gradle v4→**v6**、upload-artifact v4→**v7**。
+**结果**:构建成功(1m7s),ANNOTATIONS 警告消失。
+
+---
+
 ## 5. 当前代码结构
 
 ```
